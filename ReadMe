@@ -1,0 +1,16 @@
+Read me file:
+
+Authors: Alastair Wickens, Malcolm Fairbarn
+Email: alastair.wickens@kcl.ac.uk, malcolm.fairbairn@kcl.ac.uk
+Licensing: None
+Programming language: Python
+Problem: Using a 'tunnelling potentials' approach (arXiv:1811.09185) to find false vacuum decay solutions to non-adjacent minima of a potential landscape with multiple field space dimensions
+Solution: Designed and implemented a Newton method + gradient descent method algorithm to find the field space path with minimum S_t action. The derivatives are calculated analytically as detailed in Appendix B of BLAH.
+
+The three python files of our code are:
+
+1) Algorithm.py - the main body of the numerical algorithm. Input the potential to be studied here along with all its analytical derivatives. Currently set up for two fields but can be increased to more by simply increasing the dimensions of the hessian matrix and gradient vector.
+2) plotting_funcs.py - some utility functions to help generate the data require for the plots
+3) run.py - execute this python file to generate two results plots:
+          (a) countour plot of tunnelling potential landscape with initial guess and final tunnelling paths shown.
+          (b) Plot of final 'tunnelling potential' (blue) along in general curved field space path (curly-phi) also with S_t action contributions (red) along path and potential curve (green). Action of minimum S_t path shown in title of plot along with final curly-phi_0 release value of path. Each cross shown is a path point.
